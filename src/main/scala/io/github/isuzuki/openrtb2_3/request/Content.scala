@@ -10,7 +10,7 @@ trait Content {
   val url:                Option[String]
   val cat:                List[String]
   val videoquality:       Option[Int]
-  val content:            Option[Int]
+  val context:            Option[Int]
   val contentrating:      Option[String]
   val userrating:         Option[String]
   val qagmediaration:     Option[Int]
