@@ -1,5 +1,7 @@
 package io.github.isuzuki.openrtb2_3.request
 
+import io.github.isuzuki.openrtb2_3.{ContentContext, QAGMediaRating, VideoQuality}
+
 trait Content {
   val id:                 Option[String]
   val episode:            Option[Int]
@@ -9,11 +11,11 @@ trait Content {
   val producer:           Option[Producer]
   val url:                Option[String]
   val cat:                List[String]
-  val videoquality:       Option[Int]
-  val context:            Option[Int]
+  val videoquality:       Option[VideoQuality]
+  val context:            Option[ContentContext]
   val contentrating:      Option[String]
   val userrating:         Option[String]
-  val qagmediaration:     Option[Int]
+  val qagmediaration:     Option[QAGMediaRating]
   val keywords:           Option[String] // Comma separated list of keywords.
   val livestream:         Option[Int]
   val sourcerelationship: Option[Int]
