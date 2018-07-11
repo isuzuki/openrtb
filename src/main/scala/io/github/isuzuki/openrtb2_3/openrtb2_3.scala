@@ -23,7 +23,7 @@ package object openrtb2_3 {
     case object ProvocativeOrSuggestiveImagery  extends CreativeAttribute(9)
     // e.g., Shaky, Flashing, Flickering, Extreme Animation, Smileys
     // refer to: https://github.com/google/openrtb/blob/master/openrtb-core/src/main/protobuf/openrtb.proto#L2334
-    case object ANNOYING                        extends CreativeAttribute(10)
+    case object Annoying                        extends CreativeAttribute(10)
     case object Survey                          extends CreativeAttribute(11)
     case object TextOnly                        extends CreativeAttribute(12)
     // e.g., Embedded Games
