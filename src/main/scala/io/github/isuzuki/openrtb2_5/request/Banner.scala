@@ -1,5 +1,7 @@
 package io.github.isuzuki.openrtb2_5.request
 
+import io.github.isuzuki.openrtb2_5.{AdPosition, BannerAdType, CreativeAttribute}
+
 trait Banner {
   val format:   List[Format]
   val w:        Option[Int]
@@ -12,9 +14,9 @@ trait Banner {
   val wmin:     Option[Int]
   @deprecated("Deprecated in favor of the format array", "OpenRTB ver2.4")
   val hmin:     Option[Int]
-  val btype:    List[Int]
-  val battr:    List[Int]
-  val pos:      Option[Int]
+  val btype:    List[BannerAdType]
+  val battr:    List[CreativeAttribute]
+  val pos:      Option[AdPosition]
   val mimes:    List[String]
   val topframe: Option[Int]
   val expdir:   List[Int]

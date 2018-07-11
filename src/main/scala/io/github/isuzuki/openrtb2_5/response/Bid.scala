@@ -1,5 +1,7 @@
 package io.github.isuzuki.openrtb2_5.response
 
+import io.github.isuzuki.openrtb2_5.{APIFramework, CreativeAttribute, IQGMediaRating, Protocol}
+
 trait Bid {
   val id:             String
   val impid:          String
@@ -16,10 +18,10 @@ trait Bid {
   val crid:           Option[String]
   val tactic:         Option[String]
   val cat:            List[String]
-  val attr:           List[Int]
-  val api:            Option[Int]
-  val protocol:       Option[Int]
-  val qagmediarating: Option[Int]
+  val attr:           List[CreativeAttribute]
+  val api:            Option[APIFramework]
+  val protocol:       Option[Protocol]
+  val qagmediarating: Option[IQGMediaRating]
   val language:       Option[String]
   val dealid:         Option[String]
   val w:              Option[Int]

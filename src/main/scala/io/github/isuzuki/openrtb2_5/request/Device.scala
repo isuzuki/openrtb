@@ -1,5 +1,7 @@
 package io.github.isuzuki.openrtb2_5.request
 
+import io.github.isuzuki.openrtb2_5.{ConnectionType, DeviceType}
+
 trait Device {
   val ua:             Option[String]
   val geo:            Option[Geo]
@@ -7,7 +9,7 @@ trait Device {
   val lmt:            Option[Int]
   val ip:             Option[String]
   val ipv6:           Option[String]
-  val devicetype:     Option[Int]
+  val devicetype:     Option[DeviceType]
   val make:           Option[String]
   val model:          Option[String]
   val os:             Option[String]
@@ -23,7 +25,7 @@ trait Device {
   val language:       Option[String]
   val carrier:        Option[String]
   val mccmnc:         Option[String]
-  val connectiontype: Option[Int]
+  val connectiontype: Option[ConnectionType]
   val ifa:            Option[String]
   val didsha1:        Option[String]
   val didmd5:         Option[String]
