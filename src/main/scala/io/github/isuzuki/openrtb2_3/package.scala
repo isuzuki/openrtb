@@ -1,6 +1,10 @@
 package io.github.isuzuki
 
 package object openrtb2_3 {
+
+  /**
+   * Refer to: List 5.2 Banner Ad Types
+   */
   sealed abstract class BannerAdType(val value: Int)
   object BannerAdType {
     case object XHTMLTextAd   extends BannerAdType(1)
@@ -9,6 +13,9 @@ package object openrtb2_3 {
     case object Iframe        extends BannerAdType(4)
   }
 
+  /**
+   * Refer to: List 5.3 Creative Attributes
+   */
   sealed abstract class CreativeAttribute(val value: Int)
   object CreativeAttribute {
     case object AudioAdAutoPlay                 extends CreativeAttribute(1)
@@ -34,6 +41,9 @@ package object openrtb2_3 {
     case object AdCanBeSkipped                  extends CreativeAttribute(16)
   }
 
+  /**
+   * Refer to: List 5.4 Ad Position
+   */
   sealed abstract class AdPosition(val value: Int)
   object AdPosition {
     case object Unknown            extends AdPosition(0)
@@ -49,6 +59,9 @@ package object openrtb2_3 {
     case object FullScreen         extends AdPosition(7)
   }
 
+  /**
+   * Refer to: List 5.5 Expandable Direction
+   */
   sealed abstract class ExpandableDirection(val value: Int)
   object ExpandableDirection {
     case object Left       extends ExpandableDirection(1)
@@ -58,6 +71,9 @@ package object openrtb2_3 {
     case object FullScreen extends ExpandableDirection(5)
   }
 
+  /**
+   * Refer to: List 5.6 API Frameworks
+   */
   sealed abstract class APIFramework(val value: Int)
   object APIFramework {
     case object VPAID1_0 extends APIFramework(1)
@@ -67,12 +83,18 @@ package object openrtb2_3 {
     case object MRAID_2  extends APIFramework(5)
   }
 
+  /**
+   * Refer to: List 5.7 Video Linearity
+   */
   sealed abstract class VideoLinearity(val value: Int)
   object VideoLinearity {
     case object Linear    extends VideoLinearity(1) // Linear / In-Stream
     case object NonLinear extends VideoLinearity(2) // Non-Linear / Overlay
   }
 
+  /**
+   * Refer to: List 5.8 Video Bid Response Protocols
+   */
   sealed abstract class VideoProtocol(val value: Int)
   object VideoProtocol {
     case object VAST1_0        extends VideoProtocol(1)
@@ -83,6 +105,9 @@ package object openrtb2_3 {
     case object VAST3_0Wrapper extends VideoProtocol(6)
   }
 
+  /**
+   * Refer to: List 5.9 Video Playback Methods
+   */
   sealed abstract class VideoPlaybackMethod(val value: Int)
   object VideoPlaybackMethod {
     case object AutpPlaySoundOn  extends VideoPlaybackMethod(1)
@@ -91,6 +116,9 @@ package object openrtb2_3 {
     case object MouseOver        extends VideoPlaybackMethod(4)
   }
 
+  /**
+   * Refer to: List 5.10 Video Start Delay
+   */
   sealed abstract class VideoStartDelay(val value: Int)
   object VideoStartDelay {
     case object PreRoll         extends VideoStartDelay(0)
@@ -98,6 +126,9 @@ package object openrtb2_3 {
     case object GenericPostRoll extends VideoStartDelay(-2)
   }
 
+  /**
+   * Refer to: List 5.11 Video Quality
+   */
   sealed abstract class VideoQuality(val value: Int)
   object VideoQuality {
     case object Unknown                extends VideoQuality(0)
@@ -106,6 +137,9 @@ package object openrtb2_3 {
     case object UserGenerated          extends VideoQuality(3) // User Generated(UGC)
   }
 
+  /**
+   * Refer to: List 5.12 VAST Companion Types
+   */
   sealed abstract class VASTCompanionType(val value: Int)
   object VASTCompanionType {
     case object StaticResource extends VASTCompanionType(1)
@@ -113,12 +147,18 @@ package object openrtb2_3 {
     case object IframeResource extends VASTCompanionType(3)
   }
 
+  /**
+   * Refer to: List 5.13 Content Delivery Methods
+   */
   sealed abstract class ContentDeliveryMethod(val value: Int)
   object ContentDeliveryMethod {
     case object Streaming   extends ContentDeliveryMethod(1)
     case object Progressive extends ContentDeliveryMethod(2)
   }
 
+  /**
+   * Refer to: List 5.14 Content Context
+   */
   sealed abstract class ContentContext(val value: Int)
   object ContentContext {
     case object Video       extends ContentContext(1)
@@ -130,6 +170,9 @@ package object openrtb2_3 {
     case object Unknown     extends ContentContext(7)
   }
 
+  /**
+   * Refer to: List 5.15 QAG Media Ratings
+   */
   sealed abstract class QAGMediaRating(val value: Int)
   object QAGMediaRating {
     case object AllAudiences    extends QAGMediaRating(1)
@@ -137,6 +180,9 @@ package object openrtb2_3 {
     case object MatureAudiences extends QAGMediaRating(3)
   }
 
+  /**
+   * Refer to: List 5.16 Location Type
+   */
   sealed abstract class LocationType(val value: Int)
   object LocationType {
     case object GPS_LocationServices extends LocationType(1)
@@ -144,6 +190,9 @@ package object openrtb2_3 {
     case object UserProvided         extends LocationType(3)
   }
 
+  /**
+   * Refer to: List 5.17 Device Type
+   */
   sealed abstract class DeviceType(val value: Int)
   object DeviceType {
     case object MobileTablet     extends DeviceType(1) // Version 2.0
@@ -155,6 +204,9 @@ package object openrtb2_3 {
     case object SetTopBox        extends DeviceType(7) // Version 2.2
   }
 
+  /**
+   * Refer to: List 5.18 Connection Type
+   */
   sealed abstract class ConnectionType(val value: Int)
   object ConnectionType {
     case object Unknown                           extends ConnectionType(0)
@@ -166,6 +218,9 @@ package object openrtb2_3 {
     case object CellularNetwork_4G                extends ConnectionType(6)
   }
 
+  /**
+   * Refer to: List 5.19 No-Bid Reason Codes
+   */
   sealed abstract class NoBidReasonCode(val value: Int)
   object NoBidReasonCode {
     case object UnknownError extends NoBidReasonCode(0)
